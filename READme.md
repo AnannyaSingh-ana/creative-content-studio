@@ -1,5 +1,8 @@
 # ✨ Creative Content Studio — Powered by GPT-4 & DALL·E 3
 
+## 🚀 Try It Live
+👉 [Launch the Creative Content Studio App](https://creative-content-studio-2tcyt3m2tcrujpacaymine.streamlit.app/)
+
 Welcome to your **AI-powered creative playground** — where stories, visuals, and soundscapes come to life with just a few clicks.
 
 ## 🚀 Usage
