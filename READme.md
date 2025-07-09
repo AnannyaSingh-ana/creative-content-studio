@@ -1,11 +1,11 @@
 # ✨ Creative Content Studio — Powered by GPT-4 & DALL·E 3
 
-## 🚀 Try It Live
+## Try It Live
 👉 [Launch the Creative Content Studio App](https://creative-content-studio-2tcyt3m2tcrujpacaymine.streamlit.app/)
 
 Welcome to your **AI-powered creative playground** — where stories, visuals, and soundscapes come to life with just a few clicks.
 
-## 🚀 Usage
+## Usage
 
 **Creative Content Studio** is an intelligent, browser-based content generation app built using Streamlit and OpenAI's API (GPT-4 + DALL·E 3). It helps users create:
 - 📖 **Captivating stories** based on themes, tones, and creative prompts
@@ -16,7 +16,7 @@ All in a single click — without writing a single line of code.
 
 ---
 
-## 🎯 What You Can Do
+## What You Can Do
 
 - 🌟 **Enter a custom theme** or choose from rich creative templates
 - 🧠 **Pick from 70+ creative use cases** across 8 categories:
@@ -55,7 +55,7 @@ To use the app, you’ll need your **own OpenAI API key**. You can get one from:
 
 ---
 
-## 📦 Installation & Running Locally
+## Installation & Running Locally
 
 ```bash
 git clone https://github.com/AnannyaSingh-ana/creative-content-studio.git
