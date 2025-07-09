@@ -16,7 +16,12 @@ if not api_key:
     st.stop()
 
 # Initialize client with user key
-client = OpenAI(api_key=api_key)
+try:
+    client = OpenAI(api_key=api_key)
+    client.models.list()  
+except Exception as e:
+    st.error("❌ Failed to authenticate your OpenAI API key. Please check if the key entered is valid and has access to GPT-4 and DALL·E 3.")
+    st.stop()
 
 # Page config
 st.set_page_config(page_title="Creative Content Studio", layout="wide")
@@ -275,13 +280,17 @@ with tabs[0]:
      
     if st.button("Generate Content") and theme:
       with st.spinner("Writing your content✍️..."):
-        custom_prompt = generate_story_prompt(theme, use_case, tone)
-        story_response = client.chat.completions.create(
-            model="gpt-4-1106-preview",
-            messages=[{"role": "user", "content": custom_prompt}],
-            max_tokens=600
-        )
-        st.session_state.story = story_response.choices[0].message.content.strip()
+        try:
+            custom_prompt = generate_story_prompt(theme, use_case, tone)
+            story_response = client.chat.completions.create(
+                model="gpt-4-1106-preview",
+                messages=[{"role": "user", "content": custom_prompt}],
+                max_tokens=600
+            )
+            st.session_state.story = story_response.choices[0].message.content.strip()
+        except Exception as e:
+            st.error("❌ Failed to generate story. Please ensure your API key has GPT-4 access and available credits.")
+            st.stop()
 
 
         with st.spinner("Generating your image..."):
